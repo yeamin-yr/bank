@@ -43,12 +43,12 @@
                      </div>
                      <div class="col-md-5 center-item">
                         <div class="input-group number-spinner">
-                           <button class="btn btn-default"><i class="fas fa-minus"></i></button>
-                           <input type="text" class="form-control text-center" value="1">
-                           <button class="btn btn-default"><i class="fas fa-plus"></i></button>
+                           <button id="casebtnminus" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                           <input id="caseinp" type="text" class="form-control text-center" value="1">
+                           <button id="casebtn" class="btn btn-default"><i class="fas fa-plus"></i></button>
 
                         </div>
-                        <h5>$59</h5>
+                        <h5>$ <span id="caseprice">59</span> </h5>
                         <img src="images/remove.png" alt="" class="remove-item">
                      </div>
                   </div>
@@ -97,7 +97,7 @@
    const emniAgan = 899
    const finalPrice = emniAgan + Convt_1;
    document.getElementById('price').innerText=finalPrice;
-
+   
    })
 
 
@@ -116,8 +116,35 @@
 
    })
 
-   
+   const Case = document.getElementById('casebtn');
+   Case.addEventListener('click',function(){
+   const Fristwork =document.getElementById('caseinp').value;
+   const convt_3 =parseFloat(Fristwork)
+   const hudai = 1;
+   const JOk = hudai + convt_3;
+   document.getElementById('caseinp').value= JOk;
+   const PriceCase = document.getElementById('caseprice').innerText;
+   const Convt_4 =parseFloat(PriceCase);
+   const Kajase = 59
+   const finalPriceCase = Kajase + Convt_4;
+   document.getElementById('caseprice').innerText=finalPriceCase;
+   })
 
+
+
+   const Case_2 = document.getElementById('casebtnminus');
+   Case_2.addEventListener('click',function(){
+   const Fristwork_2 =document.getElementById('caseinp').value;
+   const convt_5 =parseFloat(Fristwork_2)
+   const hudai_1 = 1;
+   const Biyok =  convt_5 - hudai_1;
+   document.getElementById('caseinp').value=Biyok;
+   const PriceCase_1 = document.getElementById('caseprice').innerText;
+   const Convt_6 =parseFloat(PriceCase_1);
+   const Kajase_1 = 59
+   const finalPriceCase_1 =  Convt_6 - Kajase_1;
+   document.getElementById('caseprice').innerText=finalPriceCase_1;
+   })
 
 
 
